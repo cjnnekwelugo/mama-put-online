@@ -3,9 +3,435 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mama put online</title>
+    <title>MamaPutOnline - Restaurant</title>
+    <link rel="stylesheet" href="css/output.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
-<body>
-    
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-red-900 shadow-lg sticky top-0 z-50 py-2 md:py-4">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+            <!-- Mobile and Desktop Container -->
+            <div class="flex flex-row items-center justify-between gap-2 md:gap-4">
+                
+                <!-- Logo and Name (Top Left) -->
+                <div class="flex items-center gap-2 min-w-0">
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-amber-500 rounded flex items-center justify-center shadow-md ">
+                        <span class="text-red-600 font-bold text-sm md:text-lg">MP</span>
+                    </div>
+                    <div class="flex flex-col min-w-0">
+                        <h1 class="text-white font-bold text-xs sm:text-sm md:text-2xl tracking-tight leading-tight truncate">MamaPutOnline</h1>
+                        <p class="text-red-100 text-xs hidden md:block">Authentic Cuisine</p>
+                    </div>
+                </div>
+
+                <!-- Hamburger Menu (Mobile Only) -->
+                <input type="checkbox" id="nav-toggle" class="hidden peer">
+                <label for="nav-toggle" class="md:hidden flex flex-col gap-1.5 cursor-pointer p-2">
+                    <span class="w-6 h-0.5 bg-white rounded transition-all peer-checked:rotate-45 peer-checked:translate-y-2"></span>
+                    <span class="w-6 h-0.5 bg-white rounded transition-all peer-checked:opacity-0"></span>
+                    <span class="w-6 h-0.5 bg-white rounded transition-all peer-checked:-rotate-45 peer-checked:-translate-y-2"></span>
+                </label>
+
+                <!-- Navigation Menu & Search (Hidden on Mobile, Shown via Checkbox) -->
+                <div class="hidden peer-checked:flex md:flex md:flex-row flex-col absolute md:static top-16 left-0 right-0 md:gap-0 gap-2 md:items-center md:justify-center w-full md:w-auto bg-red-900 md:bg-transparent p-4 md:p-0">
+                    
+                    <!-- Navigation Menu -->                 <nav class="flex flex-col md:flex-row md:items-center gap-2 md:gap-1 w-full md:w-auto md:order-1">
+                        <a href="#menu" class="px-3 py-2 text-red-50 font-medium text-sm hover:bg-red-800 rounded-lg transition-all duration-300 block">Menu</a>
+                        <a href="#products" class="px-3 py-2 text-red-50 font-medium text-sm hover:bg-red-800 rounded-lg transition-all duration-300 block">Products</a>
+                        <a href="#services" class="px-3 py-2 text-red-50 font-medium text-sm hover:bg-red-800 rounded-lg transition-all duration-300 block">Services</a>
+                        <a href="#customer-service" class="px-3 py-2 text-red-50 font-medium text-sm hover:bg-red-800 rounded-lg transition-all duration-300 block">Customer Service</a>
+                        <a href="#contact" class="px-3 py-2 text-red-50 font-medium text-sm hover:bg-red-800 rounded-lg transition-all duration-300 block">Contact Us</a>
+                    </nav>
+
+                    <!-- Search Box -->
+                    <div class="flex items-center w-full md:w-auto md:order-2">
+                        <div class="relative w-full md:w-64">
+                            <input 
+                                type="text" 
+                                placeholder="Search" 
+                                class="w-full px-2 md:px-4 py-1 md:py-2 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-300 text-xs md:text-sm"
+                            >
+                            <button class="absolute right-1 md:right-2 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 transition-colors">
+                                <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="w-full h-auto  flex flex-col md:flex-row items-stretch overflow-hidden bg-white">
+        
+        <!-- Left Side - Food Image -->
+        <div class="w-full md:w-1/2 order-2 md:order-1 flex items-center justify-center overflow-hidden h-64 md:h-auto">
+            <div class="relative w-full h-full">
+                <!-- Beautiful Image with Overlay -->
+                <img 
+                    src="images/hero img.jpg" 
+                    alt="Delicious cooked food" 
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 ease-out"
+                >
+                <!-- Gradient Overlay -->
+                <div class="absolute inset-0  from-red-900/20 to-transparent pointer-events-none"></div>
+                
+                <!-- Floating Badge -->
+                <div class="absolute top-4 right-4 md:top-6 md:right-6 bg-red-900 text-white px-3 py-1 md:px-4 md:py-2 rounded-full font-bold text-xs md:text-base shadow-lg">
+                    🍽️ Freshly Cooked
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side - Bold Inviting Text -->
+        <div class="w-full md:w-1/2 order-1 md:order-2 flex items-center justify-center p-4 sm:p-6 md:p-12  from-red-50 to-white">
+            <div class="max-w-lg w-full text-center md:text-left">
+                <!-- Decorative Line -->
+                <div class="flex justify-center md:justify-start gap-2 mb-4 md:mb-6">
+                    <div class="w-10 md:w-12 h-1 bg-red-900 rounded-full"></div>
+                    <div class="w-2 md:w-3 h-1 bg-orange-400 rounded-full"></div>
+                </div>
+
+                <!-- Main Heading -->
+                <h2 class="text-2xl sm:text-3xl md:text-6xl font-black text-gray-900 leading-tight mb-4 md:mb-6">
+                    Don't Miss Our 
+                    <span class="text-transparent bg-clip-text  from-red-900 to-orange-600">Delicious Food</span>
+                </h2>
+
+                <!-- Subheading -->
+                <p class="text-sm sm:text-base md:text-xl text-gray-700 mb-6 md:mb-8 leading-relaxed">
+                    Experience the authentic taste of homemade cuisine prepared with love and the finest ingredients. Every dish is a celebration of flavor.
+                </p>
+
+                <!-- Highlights -->
+                <div class="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4 mb-8 md:mb-10">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 md:w-10 md:h-10 bg-red-100 rounded-full flex items-center justify-center ">
+                            <span class="text-red-900 font-bold text-sm md:text-base">✓</span>
+                        </div>
+                        <span class="text-gray-700 font-semibold text-xs md:text-sm">Fresh Ingredients</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 md:w-10 md:h-10 bg-red-100 rounded-full flex items-center justify-center ">
+                            <span class="text-red-900 font-bold text-sm md:text-base">✓</span>
+                        </div>
+                        <span class="text-gray-700 font-semibold text-xs md:text-sm">Fast Delivery</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 md:w-10 md:h-10 bg-red-100 rounded-full flex items-center justify-center ">
+                            <span class="text-red-900 font-bold text-sm md:text-base">✓</span>
+                        </div>
+                        <span class="text-gray-700 font-semibold text-xs md:text-sm">Authentic Taste</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 md:w-10 md:h-10 bg-red-100 rounded-full flex items-center justify-center ">
+                            <span class="text-red-900 font-bold text-sm md:text-base">✓</span>
+                        </div>
+                        <span class="text-gray-700 font-semibold text-xs md:text-sm">Best Prices</span>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center md:justify-start">
+                    <button class="bg-red-900 text-white px-6 sm:px-8 py-3 md:py-4 rounded-lg font-bold text-sm md:text-lg hover:bg-red-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl">
+                        Order Now
+                    </button>
+                    <button class="border-2 border-red-900 text-red-900 px-6 sm:px-8 py-3 md:py-4 rounded-lg font-bold text-sm md:text-lg hover:bg-red-50 transition-all duration-300">
+                        View Menu
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Main Section: Sidebar + Product Rows -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex flex-col md:flex-row gap-6">
+            <!-- Sidebar (Left panel) -->
+            <aside class="w-full md:w-1/4 bg-red-50 p-4 rounded-lg">
+                <h3 class="text-red-900 font-bold text-lg mb-4">Explore</h3>
+                <nav>
+                    <ul class="flex md:flex-col gap-2 overflow-x-auto md:overflow-visible pb-2">
+                        <li><a href="#category-1" class="block px-3 py-2 rounded-lg hover:bg-red-100 text-gray-800">Jollof Rice</a></li>
+                        <li><a href="#category-2" class="block px-3 py-2 rounded-lg hover:bg-red-100 text-gray-800">Pounded Yam</a></li>
+                        <li><a href="#category-3" class="block px-3 py-2 rounded-lg hover:bg-red-100 text-gray-800">Grilled Fish</a></li>
+                        <li><a href="#category-4" class="block px-3 py-2 rounded-lg hover:bg-red-100 text-gray-800">Snacks & Sides</a></li>
+                        <li><a href="#category-5" class="block px-3 py-2 rounded-lg hover:bg-red-100 text-gray-800">Desserts</a></li>
+                    </ul>
+                </nav>
+               
+            </aside>
+
+            <!-- Products area -->
+            <section class="w-full md:w-3/4 space-y-12">
+                <!-- Row 1 -->
+                <div id="category-1" class="space-y-4">
+                    <h4 class="text-xl font-bold text-gray-900">TRADITIONAL & CUSTOM COMBOS</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Card 1 -->
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="images/egusi.jpg" alt="EGUSI SOUP" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h5 class="font-bold text-lg text-gray-900">EGUSI SOUP</h5>
+                                <p class="text-sm text-gray-600">1 plate</p>
+                                <div class="mt-3 text-red-900 font-extrabold text-lg">₦1,500</div>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="images/rice and beans.jpg" alt="ri" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h5 class="font-bold text-lg text-gray-900">RICE AND BEANS</h5>
+                                <p class="text-sm text-gray-600">1 plate</p>
+                                <div class="mt-3 text-red-900 font-extrabold text-lg">₦2,300</div>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="images/rice and plaintain.jpg" alt="Rice & Plantain" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h5 class="font-bold text-lg text-gray-900">RICE AND PLANTAIN</h5>
+                                <p class="text-sm text-gray-600">1 plate</p>
+                                <div class="mt-3 text-red-900 font-extrabold text-lg">₦1,800</div>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="images/joffo.jpg" alt="Party Jollof" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h5 class="font-bold text-lg text-gray-900">PARTY JOLLOF (Large)</h5>
+                                <p class="text-sm text-gray-600">Serves 4</p>
+                                <div class="mt-3 text-red-900 font-extrabold text-lg">₦6,500</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div id="category-2" class="space-y-4">
+                    <h4 class="text-xl font-bold text-gray-900">Swallows & Soups</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Card 1 -->
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="images/pounded yam.jpg" alt="Pounded Yam" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h5 class="font-bold text-lg text-gray-900">Pounded Yam</h5>
+                                <p class="text-sm text-gray-600">1 serving</p>
+                                <div class="mt-3 text-red-900 font-extrabold text-lg">₦2,000</div>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="images/egusi.jpg" alt="Egusi Soup" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h5 class="font-bold text-lg text-gray-900">Egusi Soup</h5>
+                                <p class="text-sm text-gray-600">Large bowl</p>
+                                <div class="mt-3 text-red-900 font-extrabold text-lg">₦6,700</div>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="images/okoro soup and semo.jpg" alt="Fufu" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h5 class="font-bold text-lg text-gray-900">okoro Soup and semo</h5>
+                                <p class="text-sm text-gray-600">1 serving</p>
+                                <div class="mt-3 text-red-900 font-extrabold text-lg">₦5,900</div>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="images/banger soup combine.jpg" alt="Palm Oil Soup" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h5 class="font-bold text-lg text-gray-900">Banga Soup (Large Combine)</h5>
+                                <p class="text-sm text-gray-600">Family size</p>
+                                <div class="mt-3 text-red-900 font-extrabold text-lg">₦19,200</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div id="category-3" class="space-y-4">
+                    <h4 class="text-xl font-bold text-gray-900">Grills & Small Bites</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Card 1 -->
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="images/pexels-peg1997-4967719.jpg" alt="Grilled Fish" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h5 class="font-bold text-lg text-gray-900">Grilled Fish</h5>
+                                <p class="text-sm text-gray-600">Whole</p>
+                                <div class="mt-3 text-red-900 font-extrabold text-lg">₦4,500</div>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="images/suya.jpg" alt="Suya" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h5 class="font-bold text-lg text-gray-900">Suya (1 stick)</h5>
+                                <p class="text-sm text-gray-600">per sticks or bunch</p>
+                                <div class="mt-3 text-red-900 font-extrabold text-lg">₦1,200</div>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="images/snail cooked.jpg" alt="Peppered Snails" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h5 class="font-bold text-lg text-gray-900">Peppered Snails</h5>
+                                <p class="text-sm text-gray-600">250g</p>
+                                <div class="mt-3 text-red-900 font-extrabold text-lg">₦3,000</div>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="images/fried chicken.jpg" alt="Fried Chicken" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h5 class="font-bold text-lg text-gray-900">Fried Chicken</h5>
+                                <p class="text-sm text-gray-600">1 Plate</p>
+                                <div class="mt-3 text-red-900 font-extrabold text-lg">₦9,000</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Row 4 -->
+                <div id="category-4" class="space-y-4">
+                    <h4 class="text-xl font-bold text-gray-900">Snacks & Sides</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="images/fried plantain.jpg" alt="Fried Plantain" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h5 class="font-bold text-lg text-gray-900">Fried Plantain</h5>
+                                <p class="text-sm text-gray-600">Portion</p>
+                                <div class="mt-3 text-red-900 font-extrabold text-lg">₦500</div>
+                            </div>
+                        </article>
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="images/chips.jpg" alt="Plantain Chips" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h5 class="font-bold text-lg text-gray-900">Plantain Chips</h5>
+                                <p class="text-sm text-gray-600">Small Pack</p>
+                                <div class="mt-3 text-red-900 font-extrabold text-lg">₦400</div>
+                            </div>
+                        </article>
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="images/akara.jpg" alt="Puff Puff" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h5 class="font-bold text-lg text-gray-900">Akara</h5>
+                                <p class="text-sm text-gray-600">3 pcs</p>
+                                <div class="mt-3 text-red-900 font-extrabold text-lg">₦300</div>
+                            </div>
+                        </article>
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="images/salad.jpg" alt="Salad" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h5 class="font-bold text-lg text-gray-900">Side Salad</h5>
+                                <p class="text-sm text-gray-600">1 bowl</p>
+                                <div class="mt-3 text-red-900 font-extrabold text-lg">₦900</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Row 5 -->
+                <div id="category-5" class="space-y-4">
+                    <h4 class="text-xl font-bold text-gray-900">Desserts</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="images/fruit salad.jpg" alt="Fruit Bowl" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h5 class="font-bold text-lg text-gray-900">Fruit Bowl</h5>
+                                <p class="text-sm text-gray-600">1 bowl</p>
+                                <div class="mt-3 text-red-900 font-extrabold text-lg">₦1,000</div>
+                            </div>
+                        </article>
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="images/cake.jpg" alt="Cake Slice" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h5 class="font-bold text-lg text-gray-900">Cake Slice</h5>
+                                <p class="text-sm text-gray-600">1 slice</p>
+                                <div class="mt-3 text-red-900 font-extrabold text-lg">₦1,200</div>
+                            </div>
+                        </article>
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="images/ice cream.jpg" alt="Ice Cream" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h5 class="font-bold text-lg text-gray-900">Ice Cream</h5>
+                                <p class="text-sm text-gray-600">2 scoops</p>
+                                <div class="mt-3 text-red-900 font-extrabold text-lg">₦800</div>
+                            </div>
+                        </article>
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                            <img src="images/donuts.jpg" alt="Donut" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h5 class="font-bold text-lg text-gray-900">Glazed Donut</h5>
+                                <p class="text-sm text-gray-600">1 pc</p>
+                                <div class="mt-3 text-red-900 font-extrabold text-lg">₦250</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- Sticky Footer -->
+    <footer class="bg-red-900 text-white sticky bottom-0 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 md:py-3">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-2">
+                
+                <!-- Brand Info (Hidden on mobile, show on tablet+) -->
+                <div class="hidden sm:flex items-center gap-2 text-xs md:text-sm">
+                    <span class="font-bold">MamaPutOnline</span>
+                    <span class="text-red-100 hidden md:inline">|</span>
+                    <span class="text-red-100 hidden md:inline">Authentic cuisine</span>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="flex items-center gap-2 ">
+                    <span class="text-xs font-bold hidden md:inline">Follow:</span>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-6 h-6 md:w-7 md:h-7 bg-orange-400 rounded-full flex items-center justify-center hover:bg-orange-300 text-red-950 transition-all" title="Facebook">
+                       <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-6 h-6 md:w-7 md:h-7 bg-orange-400 rounded-full flex items-center justify-center hover:bg-orange-300 text-red-950 transition-all" title="Instagram">
+                       <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-6 h-6 md:w-7 md:h-7 bg-orange-400 rounded-full flex items-center justify-center hover:bg-orange-300 text-red-950 transition-all" title="Twitter">
+                      <i class="fa-brands fa-x-twitter"></i> 
+                      
+                    </a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-6 h-6 md:w-7 md:h-7 bg-orange-400 rounded-full flex items-center justify-center hover:bg-orange-300 text-red-950 transition-all" title="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-xs text-red-100 text-center md:text-right">
+                    <p>&copy; 2026 MamaPutOnline. All rights reserved. Designed by Cj Nnekwelugo</p>
+                    <div class="hidden md:flex gap-2 justify-center md:justify-end text-xs">
+                        <a href="#privacy" class="hover:text-orange-300 transition-colors">Privacy</a>
+                        <span>|</span>
+                        <a href="#terms" class="hover:text-orange-300 transition-colors">Terms</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
