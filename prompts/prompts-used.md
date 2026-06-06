@@ -14,4 +14,6 @@ Then i vibe enginnered the hero section and added my own image.
 
 3. Using the same design principle  create the main section,  Features: create a side panel on the left of this main section with items listed there connecting users to the main section then create a rows on the landing page each row with four products cards of food the product cards should identfy the product boldly,the quantity and the price in nigeria naira.
 
-Then i vibe enginnered the images i downloaded them from freepik vibe enginnered the cards.
+Then i vibe enginnered the codes to look good to my liking ,downloaded igbo foods and other images from freepik and vibe enginnered the cards added the prices and texts.
+
+I Actually expericed a lot of errors in the codes i vibe enginnered them.. 
