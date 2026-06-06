@@ -1,0 +1,1 @@
+Technology used html and tailwind css.
